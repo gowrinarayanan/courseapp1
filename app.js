@@ -3,11 +3,11 @@ const app=express();
 const morgan = require('morgan');
 const mongoose=require('mongoose');
 const dotenv=require('dotenv');
-const courseRoutes=require('./model/courseData')
+const courseRoutes=require('./routes/courseRoutes')
 app.use('/courses',courseRoutes)
 //const bodyParser=require('bodyParser');
 require('dotenv').config()
-dotenv.config()
+// dotenv.config()
 app.use(morgan('dev'));
 require('./db/connection')
 //app.use(bodyParser.urlencoded({extended:true}))

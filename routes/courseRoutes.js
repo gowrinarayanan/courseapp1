@@ -7,7 +7,7 @@ const courseModel=require('../model/courseData')
 router.get('/',async(req,res)=>{
     try {
         const courses=await courseModel.find()
-        res.status(200).render(courses);
+        res.status(200).send(courses);
     } catch (error) {
         res.status(404).send('Course not found');
         
